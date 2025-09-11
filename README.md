@@ -1,1 +1,49 @@
-# webMethods
+
+
+REST Service Invocation in webMethods
+
+🔹 1. Without RAD
+Approach: Folder-based REST Resource
+Example: practice.restResources.rest_test:_get
+✅ Notes:
+- REST is exposed using folder structure and naming conventions.
+- Service name must match HTTP method: _get, _post, _put, _delete.
+- No need to create RAD or REST Resource entity.
+- URL format:
+http://localhost:5555/rest/<package>/<folder>
+- Example:
+http://localhost:5555/rest/practice/rest_test
+- Automatically routes based on HTTP method.
+- Input parameters passed via query string or body.
+- No Swagger/OpenAPI support.
+- No built-in testing UI.
+- Best for quick internal APIs or prototypes.
+
+🔹 2. With RAD
+Approach: REST API Descriptor (RAD)
+✅ Notes:
+- RAD is a design-time descriptor that defines REST endpoints formally.
+- You can map any Flow service to any HTTP method and URL path.
+- Supports dynamic URL templates like /customer/{id}.
+- URL format:
+http://localhost:5555/restv2/<RADName>/<resource>/<path>
+- Example:
+http://localhost:5555/restv2/CustomerAPI/customer/123
+- Provides built-in testing interface in Integration Server.
+- Auto-generates Swagger/OpenAPI documentation.
+- Supports versioning, headers, query params, and MIME types.
+- Ideal for production-grade APIs and external integrations.
+
+📊 Comparison Summary
+|  | _get |  | 
+|  |  |  | 
+|  | _get_post |  | 
+|  |  | {param} | 
+|  |  |  | 
+|  |  |  | 
+|  |  |  | 
+|  |  |  | 
+
+
+
+Let me know if you'd like a visual diagram or a cheat sheet version of this for your team!
