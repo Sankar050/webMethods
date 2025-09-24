@@ -36,22 +36,24 @@ Exactly ✅ You’ve got it. Let me summarize everything cleanly for you.
 example:
 ✅ 
 ---
-TRY BLOCK
-├── pub.art.transaction:startTransaction
-│     └── transactionName = "local_Transaction_POC"
-│
-├── Sales.JDBC.adapter:insertSalesRecords
-│     └── connection = Sales_connection_postgres
-│
-├── Sales.JDBC.adapter:students
-│     └── connection = Sales_connection_postgres
-│
-└── pub.art.transaction:commitTransaction
-      └── transactionName = "local_Transaction_POC"
-CATCH BLOCK
-├── pub.flow:getLastError
-└── pub.art.transaction:rollbackTransaction
-      └── transactionName = "local_Transaction_POC"
+### TRY BLOCK
+- pub.art.transaction:startTransaction  
+  - transactionName = "local_Transaction_POC"
+
+- Sales.JDBC.adapter:insertSalesRecords  
+  - connection = Sales_connection_postgres
+
+- Sales.JDBC.adapter:students  
+  - connection = Sales_connection_postgres
+
+- pub.art.transaction:commitTransaction  
+  - transactionName = "local_Transaction_POC"
+
+### CATCH BLOCK
+- pub.flow:getLastError
+
+- pub.art.transaction:rollbackTransaction  
+  - transactionName = "local_Transaction_POC"
 
 ❌
 ---
