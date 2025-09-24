@@ -36,25 +36,43 @@ Exactly ✅ You’ve got it. Let me summarize everything cleanly for you.
 example:
 ✅ 
 ---
-`try`
-  `pub.art.transaction:startTransaction`
-    `Sales.JDBC.adapter:insertSalesRecords(Sales_connection_postgres)`
-    Sales.JDBC.adapter:students(Sales_connection_postgres)
-  pub.art.transaction:commitTransaction
-catch
-  pub.flow:getLastError
-  pub.art.transaction:rollbackTransaction
+TRY BLOCK
+├── pub.art.transaction:startTransaction
+│     └── transactionName = "local_Transaction_POC"
+│
+├── Sales.JDBC.adapter:insertSalesRecords
+│     └── connection = Sales_connection_postgres
+│
+├── Sales.JDBC.adapter:students
+│     └── connection = Sales_connection_postgres
+│
+└── pub.art.transaction:commitTransaction
+      └── transactionName = "local_Transaction_POC"
+CATCH BLOCK
+├── pub.flow:getLastError
+└── pub.art.transaction:rollbackTransaction
+      └── transactionName = "local_Transaction_POC"
 
 ❌
 ---
-try
-  pub.art.transaction:startTransaction
-    Sales.JDBC.adapter:insertSalesRecords(Sales_connection_postgres)
-    Sales.JDBC.adapter:students(Sales_connection_abc)
-  pub.art.transaction:commitTransaction
-catch
-  pub.flow:getLastError
-  pub.art.transaction:rollbackTransaction
+TRY BLOCK
+├── pub.art.transaction:startTransaction
+│     └── transactionName = "XA_Transaction_POC"
+│
+├── Sales.JDBC.adapter:insertSalesRecords
+│     └── connection = Sales_connection_postgres
+│
+├── Sales.JDBC.adapter:students
+│     └── connection = Sales_connection_students
+│
+└── pub.art.transaction:commitTransaction
+      └── transactionName = "XA_Transaction_POC"
+CATCH BLOCK
+├── pub.flow:getLastError
+└── pub.art.transaction:rollbackTransaction
+      └── transactionName = "XA_Transaction_POC"
+
+  
 # 🔹 Your Case: Employee + Student Tables
 
 ### ✅ If both tables are in the **same database**:
