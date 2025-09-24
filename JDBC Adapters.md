@@ -57,22 +57,24 @@ example:
 
 ❌
 ---
-TRY BLOCK
-├── pub.art.transaction:startTransaction
-│     └── transactionName = "XA_Transaction_POC"
-│
-├── Sales.JDBC.adapter:insertSalesRecords
-│     └── connection = Sales_connection_postgres
-│
-├── Sales.JDBC.adapter:students
-│     └── connection = Sales_connection_students
-│
-└── pub.art.transaction:commitTransaction
-      └── transactionName = "XA_Transaction_POC"
-CATCH BLOCK
-├── pub.flow:getLastError
-└── pub.art.transaction:rollbackTransaction
-      └── transactionName = "XA_Transaction_POC"
+### TRY BLOCK
+- pub.art.transaction:startTransaction  
+  - transactionName = "XA_Transaction_POC"
+
+- Sales.JDBC.adapter:insertSalesRecords  
+  - connection = Sales_connection_postgres
+
+- Sales.JDBC.adapter:students  
+  - connection = Sales_connection_students
+
+- pub.art.transaction:commitTransaction  
+  - transactionName = "XA_Transaction_POC"
+
+### CATCH BLOCK
+- pub.flow:getLastError
+
+- pub.art.transaction:rollbackTransaction  
+  - transactionName = "XA_Transaction_POC"
 
   
 # 🔹 Your Case: Employee + Student Tables
