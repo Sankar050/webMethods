@@ -36,9 +36,9 @@ Exactly ✅ You’ve got it. Let me summarize everything cleanly for you.
 example:
 ✅ 
 ---
-try
-  pub.art.transaction:startTransaction
-    Sales.JDBC.adapter:insertSalesRecords(Sales_connection_postgres)
+`try`
+  `pub.art.transaction:startTransaction`
+    `Sales.JDBC.adapter:insertSalesRecords(Sales_connection_postgres)`
     Sales.JDBC.adapter:students(Sales_connection_postgres)
   pub.art.transaction:commitTransaction
 catch
