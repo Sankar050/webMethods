@@ -1,0 +1,121 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" data-highlight-require-whitespace="true" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>Streaming Subscribers</title><link rel="Prev" href="CloudStreams_StreamingProviders.html" title="Previous" /><link rel="StyleSheet" href="css/_cloudstreams_online_help.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/social.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" /><!--[if IE 7]><link rel="StyleSheet" href="css/_cloudstreams_online_help_IE7.css" type="text/css" media="all" /><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print" /><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if ((window === window.top) && (window.navigator.userAgent.indexOf('bot/') === -1)) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/cloudstreams-is-onlinehelp/CloudStreams_StreamingSubscribers.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script></head><body id="pvgNV906GmyooT1ZegUW8vA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/cloudstreams-is-onlinehelp/CloudStreams_StreamingSubscribers.html');"><header id="wwconnect_header"><!-- Produkt Name und Version in Breadcrumbs SQ --><div class="ww_skin_breadcrumbs"><span>CloudStreams</span>&nbsp;11.1 |
+		     <span class="ww_skin_breadcrumbs_parent"><a href="../cloudstreams-is-onlinehelp/CloudStreams_ScreensIntro.html#wwconnect_header">CloudStreams Configuration Screens</a></span><span class="ww_skin_breadcrumbs_divider"> | </span><span class="ww_skin_breadcrumbs_current">Streaming Subscribers</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a></div></header><div id="wwID0EPEDI" class="Heading_1">Streaming Subscribers</div><div id="wwID0EVFDI" class="Body"><span class="ph">CloudStreams</span> supports the following kinds of streaming client implementations:</div><div id="wwID0EGGDI" class="List_1"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span>Client implementations based on the Comet library, which works with streaming services using the Bayeux protocol (for example, Salesforce).</div><div id="wwID0EZGDI" class="List_1"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span>An HTTP client type, which is used for HTTP-based streaming service providers that use a long-lived HTTP connection to send data periodically to the client connected to them. For example, Twitter uses this mechanism to send updates made to their streaming API endpoints (Public, User, and Site streams).</div><div id="wwID0ENHDI" class="Body">To open the Streaming Subscribers options screen, click <span class="uicontrol">Solutions &gt; CloudStreams &gt; Streaming &gt; Subscribers</span> in the navigation panel.</div><div id="wwID0E5HDI" class="Section_Title">The Streaming Subscribers Options</div><div id="wwID0ELIDI" class="Definition_Term">Enable Subscriber</div><div id="wwID0EQIDI" class="Definition_Description">Enables or disables the subscriber configuration. If the subscriber configuration is disabled, then no streaming notifications will be received by <span class="ph">CloudStreams</span> until it is enabled again.</div><div id="wwID0EBJDI" class="Definition_Term">Subscriber Name</div><div id="wwID0EGJDI" class="Definition_Description">A name that uniquely identifies a subscriber.</div><div id="wwID0EQJDI" class="Definition_Term">Provider</div><div id="wwID0EVJDI" class="Definition_Description">One of the streaming providers previously configured in the <span class="wintitle">Streaming Providers</span> screen. The provider names are listed in a drop-down field, and each subscriber must choose the provider configuration to use in order for the streaming subscription to work.</div><div id="wwID0EFKDI" class="Definition_Term">Channel Endpoint</div><div id="wwID0EKKDI" class="Definition_Description">The topic/channel name or the endpoint address for the subscription request, depending on the streaming provider's client type, as follows:</div><div id="wwID0EVKDI" class="List_2"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span>If the streaming provider's client type is <span class="uicontrol">Comet</span>, specify the topic or channel name for the subscription request. This is usually of the form <span class="filepath_002c_varname">/channel_name</span>. For example, for Salesforce it can be something like <span class="filepath">/topic/InvoiceUpdate</span>. You must not specify the complete subscription endpoint address (of the form <span class="filepath">http://</span><span class="filepath_002c_varname">server:port</span><span class="filepath">/...</span>) because that information is part of the provider configuration information. The channel endpoint must refer to the actual channel name only. This endpoint will be appended to the provider endpoint before the actual streaming connection is made to the provider.</div><div id="wwID0EEMDI" class="List_2"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span>If the streaming provider's client type is <span class="uicontrol">HTTP</span>, specify the endpoint address without the actual stream/channel name included. For example, Twitter's Public Stream address is:</div><div id="wwID0E2MDI" class="List_2_Continued"><span class="filepath">https://stream.twitter.com/1.1/</span><span class="filepath_002c_varname">channelEndpoint</span></div><div id="wwID0ESNDI" class="Definition_Term">Content Type</div><div id="wwID0EXNDI" class="Definition_Description">The HTTP Content-Type header value. Not required if the Streaming Providers <span class="uicontrol">Client Type</span> field is set to <span class="uicontrol">Comet</span>.</div><div id="wwID0EKODI" class="Definition_Term">HTTP Method</div><div id="wwID0EPODI" class="Definition_Description">The HTTP method to use for the streaming request made to the service provider. Not required if the Streaming Providers <span class="uicontrol">Client Type</span> field is set to <span class="uicontrol">Comet</span>.</div><div id="wwID0ECPDI" class="Definition_Term">Request Body</div><div id="wwID0EHPDI" class="Definition_Description">The optional request entity or message contents to send to the service endpoint. This is only applicable for the POST, PUT, OPTIONS, and PATCH HTTP methods; the other HTTP methods do not require a message body. Not required if the Streaming Providers <span class="uicontrol">Client Type</span> field is set to <span class="uicontrol">Comet</span>.</div><div id="wwID0E1PDI" class="Definition_Term">HTTP Headers</div><div id="wwID0E6PDI" class="Definition_Description">Additional HTTP headers (name-value pairs) to be sent to the service endpoint (optional). Not required if the Streaming Providers <span class="uicontrol">Client Type</span> field is set to <span class="uicontrol">Comet</span>.</div><div id="wwID0ESQDI" class="Definition_Term">Destination Type</div><div id="wwID0EXQDI" class="Definition_Description">The type of destination to which the streaming subscription response will be delivered when a notification is received from the provider:</div><div id="wwID0ECRDI" class="List_2"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span><span class="uicontrol">ESB Service</span>: An <span class="ph">Integration Server</span> service that will be invoked when a streaming notification is received. The <span class="uicontrol">ESB Service Destination Configuration</span> section appears if you select <span class="uicontrol">ESB Service</span> as the <span class="uicontrol">Destination Type</span>.</div><div id="wwID0EKSDI" class="List_2_Continued"><span class="uicontrol">Service Name</span>: The fully qualified service name comprises of two parts: a folder identifier and the service name. The folder identifier consists of one or more folder names. The service name is a single name of the service and must be of the fully qualified form <span class="filepath_002c_varname">folder1.folder2:serviceName</span>. For more information, see the topic <span class="Citation">Creating an ESB Service as a Streaming Subscriber Destination</span> in the document <span class="Citation">Administering webMethods CloudStreams</span>.</div><div id="wwID0EGTDI" class="List_2_Continued"><span class="uicontrol">Run As User</span>: The user name you want <span class="ph">Integration Server</span> to use when running the service. Click the search icon to search for and select the user. A user can be selected from the local or central directory. <span class="ph">Integration Server</span> runs the service as if the user you specify is the authenticated user that invoked the service. If the service is governed by an Access Control List (ACL), ensure that you specify a user that is allowed to invoke the service.</div><div id="wwID0E1TDI" class="List_2"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span><span class="uicontrol">Journal Log</span>: The IS journal log to which the streaming subscription response contents will be logged when a notification is received from the provider.</div><div id="wwID0E5UDI" class="title">Related Topics</div><div id="wwID0ECVDI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_General.html#wwID0EXAAE"
+   
+     title="General"
+    ><span class="Link_Text">General</span></a></div><div id="wwID0EPVDI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Email.html#wwID0EEFAG"
+   
+     title="Email"
+    ><span class="Link_Text">Email</span></a></div><div id="wwID0E3VDI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Database.html#wwID0EOWAG"
+   
+     title="Database"
+    ><span class="Link_Text">Database</span></a></div><div id="wwID0EJWDI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_VS.html#wwID0EBHBG"
+   
+     title="Virtual Services"
+    ><span class="Link_Text">Virtual Services</span></a></div><div id="wwID0EWWDI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_STS.html#wwID0ENPBG"
+   
+     title="STS"
+    ><span class="Link_Text">STS</span></a></div><div id="wwID0EDXDI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Fault.html#wwID0E6CAI"
+   
+     title="Service Fault Configuration"
+    ><span class="Link_Text">Service Fault Configuration</span></a></div><div id="wwID0EQXDI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Consumers.html#wwID0EM2AI"
+   
+     title="Consumers"
+    ><span class="Link_Text">Consumers</span></a></div><div id="wwID0E4XDI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_OAuth.html#wwID0EQNBI"
+   
+     title="OAuth Tokens"
+    ><span class="Link_Text">OAuth Tokens</span></a></div><div id="wwID0EKYDI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Providers.html#wwID0EGDCI"
+   
+     title="Providers"
+    ><span class="Link_Text">Providers</span></a></div><div id="wwID0EXYDI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_StreamingProviders.html#wwID0EZQCI"
+   
+     title="Streaming Providers"
+    ><span class="Link_Text">Streaming Providers</span></a></div><footer><!-- Related Topics --><!--                --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><!-- SQ insert Footer --><br /><hr style="border:1px solid; border-color: #1776BF; " /><!-- FRWE: Why is the font family information hard-coded?? --><div style="font-family: 'Roboto', Sans-Serif; font-size: 10px; margin-top: 6px; margin-bottom: 6px; text-align: center;">
+      Copyright&nbsp;Super iPaaS Integration LLC, an IBM Company&nbsp;2024 
+     </div><!-- SQ insert Date 
+	 <div style="text-align: center; font-weight: bold;" wwpage:content="pub-date">January 1, 2015</div> --><!-- old Footer 2016
+	  <div class="footer">Copyright &#169; <span wwpage:content="sag:product-copyrfirst"></span>, <span wwpage:content="sag:organization-copyrholder"></span>, <a href="http://sag.com/" wwpage:attribute-href="sag:organization-url" wwpage:content="sag:organization-url">http://sag.com/</a>
+   --><!-- SQ Variablen --><!-- Copyright Test --><!--	  <div style="text-decoration: underline">Copyright Import Test:</div>
+	  <wwpage:Import wwpage:content-from-file="Copyright/copyright_en.asp" />
+	  <br></br>--><!--
+	  <!-\- SQ Variables - Information from xresources -\->
+	  <div style="text-decoration: underline">From xresources:</div>
+	  <div>sag:organization-id == <span wwpage:content="sag:organization-id"></span></div>
+	  <div>sag:organization-name == <span wwpage:content="sag:organization-name"></span></div>
+	  <div>sag:organization-copyrholder == <span wwpage:content="sag:organization-copyrholder"></span></div>
+	  <div>sag:organization-url == <span wwpage:content="sag:organization-url"></span></div>
+	  
+	  <div>sag:family-id == <span wwpage:content="sag:family-id"></span></div>
+	  <div>sag:family-name == <span wwpage:content="sag:family-name"></span></div>
+	  <div>sag:family-organization == <span wwpage:content="sag:family-organization"></span></div>
+	  
+	  <div>sag:product-id == <span wwpage:content="sag:product-id"></span></div>
+	  <div>sag:product-name == <span wwpage:content="sag:product-name"></span></div>
+	  <div>sag:product-copyrfirst == <span wwpage:content="sag:product-copyrfirst"></span></div>
+	  <div>sag:product-family == <span wwpage:content="sag:product-family"></span></div>
+	  
+	  <!-\- SQ Variables - Values from DITA-Map and Keymap-\->
+	  <br></br>
+	  <div style="text-decoration: underline">From DITA/Book-Map:</div>
+	  <div>ProdInfo Prodname == <span wwpage:replace="wwvars:ProdInfoProdName"></span></div>
+	  <div>ProdInfo Mod First == <span wwpage:replace="wwvars:ProdInfoModFirst"></span></div>
+	  <div>ProdInfo Mod Last == <span wwpage:replace="wwvars:ProdInfoModLast"></span></div>
+	  <div>ProdInfo Rel First == <span wwpage:replace="wwvars:ProdInfoRelFirst"></span></div>
+	  <div>ProdInfo Rel Last == <span wwpage:replace="wwvars:ProdInfoRelLast"></span></div>
+	  <div>ProdInfo Vers First == <span wwpage:replace="wwvars:ProdInfoVersFirst"></span></div>
+	  <div>ProdInfo Vers Last == <span wwpage:replace="wwvars:ProdInfoVersLast"></span></div>
+	  <div>ProdInfo vrm vers.rel.mod == <span wwpage:replace="wwvars:ProdInfoVersFirst"></span>.<span wwpage:replace="wwvars:ProdInfoRelLast"></span>.<span wwpage:replace="wwvars:ProdInfoModLast"></span></div>
+	  <div>BookID PartNo == <span wwpage:replace="wwvars:BookPartNo"></span></div>
+	  <div>othermeta release-version == <span wwpage:replace="wwvars:ReleaseVersion"></span></div>
+	  <div>othermeta release-date == <span wwpage:replace="wwvars:ReleaseDate"></span></div>
+	  <div>othermeta release-edition == <span wwpage:replace="wwvars:ReleaseEdition"></span></div>
+	  <div>othermeta product == <span wwpage:replace="wwvars:Product"></span></div>
+	  <br></br>
+	  <div style="text-decoration: underline">From x_runtime/keymap.ditamap:</div>
+	  <div>sag:product-shortname == <span wwpage:replace="wwvars:sag:product-shortname"></span></div>
+	  <div>sag:product-longname == <span wwpage:replace="wwvars:sag:product-longname"></span></div>
+	  <div>versionAdd == <span wwpage:replace="wwvars:versionAdd"></span></div>
+	  <div>yearFYLY == <span wwpage:replace="wwvars:yearFYLY"></span></div>
+	  <div>fingerprint == <span wwpage:replace="wwvars:fingerprint"></span></div>
+	  <div>sag:CopyrightDeclaration == <span wwpage:replace="wwvars:sag:CopyrightDeclaration"></span></div>
+	  <div>pdfReleaseDate == <span wwpage:replace="wwvars:pdfReleaseDate"></span></div>
+	  <div>documentID == <span wwpage:replace="wwvars:documentID"></span></div>
+	  <br></br>
+	  <div style="text-decoration: underline">Reserve:</div>
+	  <div>organization == <span wwpage:content="organization"></span></div>
+	  <div>product-name == <span wwpage:content="product-name"></span></div>
+	  <div>copyright-first == <span wwpage:content="copyright-first"></span></div>
+	  <div>copyright-last == <span wwpage:content="copyright-last"></span></div>
+	  <div>copyright-first-b == <span wwpage:content="wwvars:copyright-first-b"></span></div>
+	  <div>copyright-last-b == <span wwpage:content="copyright-last-b"></span></div>
+	  <div>doc-id-one == <span wwpage:content="doc-id-one"></span></div>
+	  <div>doc-id-two == <span wwpage:content="doc-id-two"></span></div>  
+	  <div>Published == <span wwpage:content="pub-date"></span></div>
+	  --></footer></body></html>

@@ -1,0 +1,339 @@
+div.Title, caption.Title
+{
+  color: #666666;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.75em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  margin-bottom: 6px;
+  margin-top: 25px;
+}
+
+div.Body, caption.Body
+{
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-bottom: 6px;
+  margin-top: 9px;
+  padding-bottom: 0pt;
+  padding-top: 0pt;
+}
+
+div.Heading_1, caption.Heading_1
+{
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.75em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  margin-bottom: 6px;
+  margin-top: 25px;
+}
+
+div.Section, caption.Section
+{
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-bottom: 6px;
+  margin-top: 9px;
+  padding-bottom: 0pt;
+  padding-top: 0pt;
+}
+
+div.Section_Title, caption.Section_Title
+{
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  margin-bottom: 6px;
+  margin-top: 25px;
+}
+
+div.Definition_Term, caption.Definition_Term
+{
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-left: 15px;
+  margin-top: 9px;
+}
+
+div.Definition_Description, caption.Definition_Description
+{
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-bottom: 6px;
+  margin-left: 22px;
+  margin-top: 0px;
+}
+
+div.Preformatted_1, caption.Preformatted_1
+{
+  background-color: #E5E4E4;
+  color: #333333;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 9pt;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-left: 18pt;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  white-space: pre;
+}
+
+div.List_2, caption.List_2
+{
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-bottom: 6px;
+  margin-left: 0pt;
+  margin-top: 9px;
+  padding-bottom: 0pt;
+  padding-left: 36pt;
+  padding-top: 0pt;
+  text-indent: -18pt;
+}
+
+div.Note_1, caption.Note_1
+{
+  background-color: #E5E4E4;
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-bottom: 0px;
+  margin-left: 18pt;
+  margin-top: 2px;
+  padding-bottom: 6pt;
+  padding-left: 2pt;
+  padding-top: 6pt;
+}
+
+div.Body_1_-_Note, caption.Body_1_-_Note
+{
+  background-color: #E5E4E4;
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-bottom: 0px;
+  margin-left: 18pt;
+  margin-top: 0px;
+  padding-bottom: 6pt;
+  padding-left: 2pt;
+  padding-top: 6pt;
+}
+
+div.title, caption.title
+{
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  margin-bottom: 6px;
+  margin-top: 25px;
+}
+
+div.heading-no-quotes, caption.heading-no-quotes
+{
+  color: #FF8000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt;
+  margin-left: 18pt;
+}
+
+div.List_1, caption.List_1
+{
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-bottom: 6px;
+  margin-left: 0pt;
+  margin-top: 9px;
+  padding-bottom: 0pt;
+  padding-left: 18pt;
+  padding-top: 0pt;
+  text-indent: -18pt;
+}
+
+div.Note, caption.Note
+{
+  background-color: #E5E4E4;
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-bottom: 0px;
+  margin-left: 0pt;
+  margin-top: 2px;
+  padding-bottom: 6pt;
+  padding-left: 2pt;
+  padding-top: 6pt;
+}
+
+div.Body_-_Note, caption.Body_-_Note
+{
+  background-color: #E5E4E4;
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-bottom: 0px;
+  margin-left: 0pt;
+  margin-top: 0px;
+  padding-bottom: 6pt;
+  padding-left: 2pt;
+  padding-top: 6pt;
+}
+
+div.List_2_Continued, caption.List_2_Continued
+{
+  color: Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-bottom: 6px;
+  margin-left: 36pt;
+  margin-top: 9px;
+  padding-bottom: 0pt;
+  padding-top: 0pt;
+}
+
+div.Preformatted_2, caption.Preformatted_2
+{
+  background-color: #E5E4E4;
+  color: #333333;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 9pt;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-left: 36pt;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  white-space: pre;
+}
+
+span.Citation, abbreviation.Citation, acronym.Citation, citation.Citation
+{
+  font-style: italic;
+}
+
+span.uicontrol, abbreviation.uicontrol, acronym.uicontrol, citation.uicontrol
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+span.varname, abbreviation.varname, acronym.varname, citation.varname
+{
+  font-style: italic;
+}
+
+span.emphasis, abbreviation.emphasis, acronym.emphasis, citation.emphasis
+{
+  font-style: italic;
+}
+
+span.ph_002c_Citation, abbreviation.ph_002c_Citation, acronym.ph_002c_Citation, citation.ph_002c_Citation
+{
+  font-style: italic;
+}
+
+span.apiname, abbreviation.apiname, acronym.apiname, citation.apiname
+{
+  font-family: 'Source Code Pro', monospace;
+}
+
+span.parmname, abbreviation.parmname, acronym.parmname, citation.parmname
+{
+  font-family: 'Source Code Pro', monospace;
+}
+
+span.inlinetitle, abbreviation.inlinetitle, acronym.inlinetitle, citation.inlinetitle
+{
+  font-weight: bold;
+}
+
+span.filepath, abbreviation.filepath, acronym.filepath, citation.filepath
+{
+  font-family: 'Source Code Pro', monospace;
+}
+
+span.filepath_002c_varname, abbreviation.filepath_002c_varname, acronym.filepath_002c_varname, citation.filepath_002c_varname
+{
+  font-family: 'Source Code Pro', monospace;
+  font-style: italic;
+}
+
+span.codeph, abbreviation.codeph, acronym.codeph, citation.codeph
+{
+  font-family: 'Source Code Pro', monospace;
+}
+
+span.userinput, abbreviation.userinput, acronym.userinput, citation.userinput
+{
+  font-family: 'Source Code Pro', monospace;
+}
+
+span.Bold
+{
+  font-weight: bold;
+}
+
+span.Bold
+{
+  font-weight: bold;
+}
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" data-highlight-require-whitespace="true" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>Event trigger details</title><link rel="Prev" href="IS_Settings_Streaming_Event_TriggersScrn.html" title="Previous" /><link rel="Next" href="IS_Settings_Streaming_Event_Triggers_EditAll.html" title="Next" /><link rel="StyleSheet" href="css/_is_admin_help.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/social.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" /><!--[if IE 7]><link rel="StyleSheet" href="css/_is_admin_help_IE7.css" type="text/css" media="all" /><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print" /><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if ((window === window.top) && (window.navigator.userAgent.indexOf('bot/') === -1)) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/is-onlinehelp/IS_Settings_Streaming_Event_Triggers_DetailScrn.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script></head><body id="pm8FUSLQ9gtUK1stNjotKOA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/is-onlinehelp/IS_Settings_Streaming_Event_Triggers_DetailScrn.html');"><header id="wwconnect_header"><!-- Produkt Name und Version in Breadcrumbs SQ --><div class="ww_skin_breadcrumbs"><span>Integration Server</span>&nbsp;11.1 |
+		     <span class="ww_skin_breadcrumbs_parent"><a href="../is-onlinehelp/Menu_Streaming.html#wwconnect_header">Streaming</a></span><span class="ww_skin_breadcrumbs_divider"> | </span><span class="ww_skin_breadcrumbs_parent"><a href="../is-onlinehelp/IS_Settings_Streaming_Event_TriggersScrn.html#wwconnect_header">Event triggers</a></span><span class="ww_skin_breadcrumbs_divider"> | </span><span class="ww_skin_breadcrumbs_current">Event trigger details</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a></div></header><div id="wwID0EBKQQ" class="Heading_2">Event trigger details</div><div id="wwID0EFLQQ" class="Body">Use the Event trigger details page to view the event trigger configuration. For more detailed description of event trigger configuration and properties, see <span class="ph"> </span><span class="ph_002c_Citation">IBM webMethods Service Development Help</span>,</div><div id="wwID0EZLQQ" class="List_1"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span>Click <span class="uicontrol">Return to Event Processing Trigger Management</span> to return to the list of event triggers.</div><div id="wwID0EVMQQ" class="Section_Title">General Settings</div><div id="wwID0ECNQQ" class="Definition_Term">Trigger Name</div><div id="wwID0EHNQQ" class="Definition_Description">Fully qualified name of the event trigger.</div><div id="wwID0EWNQQ" class="Definition_Term">Package</div><div id="wwID0E2NQQ" class="Definition_Description">Package in which the streaming connection alias is saved.</div><div id="wwID0EFOQQ" class="Definition_Term">Connection Alias</div><div id="wwID0EKOQQ" class="Definition_Description">Streaming connection alias used by the event trigger.</div><div id="wwID0EUOQQ" class="Definition_Term">Client ID</div><div id="wwID0E5OQQ" class="Definition_Description">Client ID for the event trigger. <span class="ph">Integration Server</span> creates a client ID for event triggers by appending the event trigger name to the client prefix. In Kafka, the client ID is known as the group ID.</div><div id="wwID0EOPQQ" class="Definition_Term">Enabled</div><div id="wwID0ETPQQ" class="Definition_Description">Indicates whether or not the streaming connection alias is enabled. When a streaming connection alias is enabled, <span class="ph">Integration Server</span> can use it to send and receive messages from the streaming provider server on behalf of publishing services and event triggers, respectively. A disabled streaming connection alias cannot be used to send messages to or receive messages.</div><div id="wwID0EFQQQ" class="Section_Title">Receive and Decode</div><div id="wwID0ESQQQ" class="Definition_Term"><span class="varname">streamName</span></div><div id="wwID0E2QQQ" class="Definition_Description">Name for the stream.</div><div id="wwID0EFRQQ" class="Definition_Term">Event Specification Name</div><div id="wwID0EKRQQ" class="Definition_Description">Event specification that identifies the topic from which the trigger receives events.</div><div id="wwID0EURQQ" class="Definition_Term">Topic</div><div id="wwID0EZRQQ" class="Definition_Description">Topic on the streaming provider from which the event trigger retrieves events.</div><div id="wwID0EDSQQ" class="Definition_Term">Key Deserializer</div><div id="wwID0EISQQ" class="Definition_Description">Data type for the event key. The type indicates how <span class="ph">Integration Server</span> encodes the key object in a published event to bytes and how <span class="ph">Integration Server</span> decodes the bytes in the key object of an event received by an event trigger.</div><div id="wwID0E2SQQ" class="Definition_Term">Value Deserializer</div><div id="wwID0EATQQ" class="Definition_Description">The data type for the event value. The type indicates how <span class="ph">Integration Server</span> encodes the value object in a published event to bytes and how <span class="ph">Integration Server</span> decodes the bytes in the value object of an event received by an event trigger.</div><div id="wwID0EWTQQ" class="Section_Title">Process</div><div id="wwID0EDUQQ" class="Definition_Term"><span class="varname">window</span></div><div id="wwID0EMUQQ" class="Definition_Description">Indicates whether the event trigger processes a single event, a count-based window of events, or a time-based window of events A summary of window configuration follows.</div><div id="wwID0EWUQQ" class="Definition_Term"><span class="varname">streamName</span></div><div id="wwID0E6UQQ" class="Definition_Description">Name of the stream.</div><div id="wwID0EOVQQ" class="Definition_Term"><span class="varname">streamProcessingSteps</span></div><div id="wwID0EXVQQ" class="Definition_Description">Stream processing steps used in the event trigger, including summary of the step configuration.</div><div id="wwID0EEWQQ" class="Section_Title">Properties</div><div id="wwID0ERWQQ" class="Definition_Term">Commit Mode</div><div id="wwID0EWWQQ" class="Definition_Description">Determines when the consumer for an event trigger commits the events it received to the streaming provider.</div><div id="wwID0EAXQQ" class="Definition_Term">Polling Request Size</div><div id="wwID0EFXQQ" class="Definition_Description">Number of events each polling request retrieves.</div><div id="wwID0EPXQQ" class="Definition_Term">Polling Interval</div><div id="wwID0EUXQQ" class="Definition_Description">Frequency with which the consumers for the trigger poll the streaming provider for events.</div><div id="wwID0E5XQQ" class="Definition_Term">On Disconnect</div><div id="wwID0EDYQQ" class="Definition_Description">Determines how an event trigger handles received, unprocessed events upon notification of disconnect from the streaming provider.</div><div id="wwID0ENYQQ" class="Definition_Term">Consumer Count Minimum</div><div id="wwID0ESYQQ" class="Definition_Description">Minimum number of consumers to create for this event trigger.</div><div id="wwID0E3YQQ" class="Definition_Term">Consumer Count Maximum</div><div id="wwID0EBZQQ" class="Definition_Description">Maximum number of consumers to create for this event trigger.</div><div id="wwID0ELZQQ" class="Definition_Term">Add Consumers After</div><div id="wwID0EQZQQ" class="Definition_Description">The length of time to wait before creating another consumer.</div><div id="wwID0E1ZQQ" class="Definition_Term">Remove Inactive Consumers After</div><div id="wwID0E6ZQQ" class="Definition_Description">The length of time that a consumer can be inactive before <span class="ph">Integration Server</span> removes it.</div><div id="wwID0EO1QQ" class="Definition_Term">Use Parallel Streams</div><div id="wwID0ET1QQ" class="Definition_Description">Whether <span class="ph">Integration Server</span> splits intermediate processing across multiple threads.</div><div id="wwID0EC2QQ" class="Definition_Term">Transient Error Handling</div><div id="wwID0EH2QQ" class="Definition_Description">How <span class="ph">Integration Server</span> handles a transient error for an event trigger. A transient error occurs when a service executed as part of event processing throws an ISRuntimeException</div><div id="wwID0EW2QQ" class="Definition_Term">Fatal Error Handling</div><div id="wwID0E22QQ" class="Definition_Description">How <span class="ph">Integration Server</span> responds when a fatal error occurs during event trigger processing.</div><div id="wwID0EK3QQ" class="Definition_Term">Resource Monitoring Service</div><div id="wwID0EP3QQ" class="Definition_Description">The service that <span class="ph">Integration Server</span> executes to determine the availability of resources associated with stream processing for the event trigger.</div><div id="wwID0EB4QQ" class="Section_Title">Runtime Configuration Parameters</div><div id="wwID0EG4QQ" class="Body">Displays the configuration parameters and values that <span class="ph">Integration Server</span> uses for the consumer created for an event trigger.</div><footer><!-- Related Topics --><!--                --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><!-- SQ insert Footer --><br /><hr style="border:1px solid; border-color: #1776BF; " /><!-- FRWE: Why is the font family information hard-coded?? --><div style="font-family: 'Roboto', Sans-Serif; font-size: 10px; margin-top: 6px; margin-bottom: 6px; text-align: center;">
+      Copyright&nbsp;Super iPaaS Integration LLC, an IBM Company&nbsp;2024 
+     </div><!-- SQ insert Date 
+	 <div style="text-align: center; font-weight: bold;" wwpage:content="pub-date">January 1, 2015</div> --><!-- old Footer 2016
+	  <div class="footer">Copyright &#169; <span wwpage:content="sag:product-copyrfirst"></span>, <span wwpage:content="sag:organization-copyrholder"></span>, <a href="http://sag.com/" wwpage:attribute-href="sag:organization-url" wwpage:content="sag:organization-url">http://sag.com/</a>
+   --><!-- SQ Variablen --><!-- Copyright Test --><!--	  <div style="text-decoration: underline">Copyright Import Test:</div>
+	  <wwpage:Import wwpage:content-from-file="Copyright/copyright_en.asp" />
+	  <br></br>--><!--
+	  <!-\- SQ Variables - Information from xresources -\->
+	  <div style="text-decoration: underline">From xresources:</div>
+	  <div>sag:organization-id == <span wwpage:content="sag:organization-id"></span></div>
+	  <div>sag:organization-name == <span wwpage:content="sag:organization-name"></span></div>
+	  <div>sag:organization-copyrholder == <span wwpage:content="sag:organization-copyrholder"></span></div>
+	  <div>sag:organization-url == <span wwpage:content="sag:organization-url"></span></div>
+	  
+	  <div>sag:family-id == <span wwpage:content="sag:family-id"></span></div>
+	  <div>sag:family-name == <span wwpage:content="sag:family-name"></span></div>
+	  <div>sag:family-organization == <span wwpage:content="sag:family-organization"></span></div>
+	  
+	  <div>sag:product-id == <span wwpage:content="sag:product-id"></span></div>
+	  <div>sag:product-name == <span wwpage:content="sag:product-name"></span></div>
+	  <div>sag:product-copyrfirst == <span wwpage:content="sag:product-copyrfirst"></span></div>
+	  <div>sag:product-family == <span wwpage:content="sag:product-family"></span></div>
+	  
+	  <!-\- SQ Variables - Values from DITA-Map and Keymap-\->
+	  <br></br>
+	  <div style="text-decoration: underline">From DITA/Book-Map:</div>
+	  <div>ProdInfo Prodname == <span wwpage:replace="wwvars:ProdInfoProdName"></span></div>
+	  <div>ProdInfo Mod First == <span wwpage:replace="wwvars:ProdInfoModFirst"></span></div>
+	  <div>ProdInfo Mod Last == <span wwpage:replace="wwvars:ProdInfoModLast"></span></div>
+	  <div>ProdInfo Rel First == <span wwpage:replace="wwvars:ProdInfoRelFirst"></span></div>
+	  <div>ProdInfo Rel Last == <span wwpage:replace="wwvars:ProdInfoRelLast"></span></div>
+	  <div>ProdInfo Vers First == <span wwpage:replace="wwvars:ProdInfoVersFirst"></span></div>
+	  <div>ProdInfo Vers Last == <span wwpage:replace="wwvars:ProdInfoVersLast"></span></div>
+	  <div>ProdInfo vrm vers.rel.mod == <span wwpage:replace="wwvars:ProdInfoVersFirst"></span>.<span wwpage:replace="wwvars:ProdInfoRelLast"></span>.<span wwpage:replace="wwvars:ProdInfoModLast"></span></div>
+	  <div>BookID PartNo == <span wwpage:replace="wwvars:BookPartNo"></span></div>
+	  <div>othermeta release-version == <span wwpage:replace="wwvars:ReleaseVersion"></span></div>
+	  <div>othermeta release-date == <span wwpage:replace="wwvars:ReleaseDate"></span></div>
+	  <div>othermeta release-edition == <span wwpage:replace="wwvars:ReleaseEdition"></span></div>
+	  <div>othermeta product == <span wwpage:replace="wwvars:Product"></span></div>
+	  <br></br>
+	  <div style="text-decoration: underline">From x_runtime/keymap.ditamap:</div>
+	  <div>sag:product-shortname == <span wwpage:replace="wwvars:sag:product-shortname"></span></div>
+	  <div>sag:product-longname == <span wwpage:replace="wwvars:sag:product-longname"></span></div>
+	  <div>versionAdd == <span wwpage:replace="wwvars:versionAdd"></span></div>
+	  <div>yearFYLY == <span wwpage:replace="wwvars:yearFYLY"></span></div>
+	  <div>fingerprint == <span wwpage:replace="wwvars:fingerprint"></span></div>
+	  <div>sag:CopyrightDeclaration == <span wwpage:replace="wwvars:sag:CopyrightDeclaration"></span></div>
+	  <div>pdfReleaseDate == <span wwpage:replace="wwvars:pdfReleaseDate"></span></div>
+	  <div>documentID == <span wwpage:replace="wwvars:documentID"></span></div>
+	  <br></br>
+	  <div style="text-decoration: underline">Reserve:</div>
+	  <div>organization == <span wwpage:content="organization"></span></div>
+	  <div>product-name == <span wwpage:content="product-name"></span></div>
+	  <div>copyright-first == <span wwpage:content="copyright-first"></span></div>
+	  <div>copyright-last == <span wwpage:content="copyright-last"></span></div>
+	  <div>copyright-first-b == <span wwpage:content="wwvars:copyright-first-b"></span></div>
+	  <div>copyright-last-b == <span wwpage:content="copyright-last-b"></span></div>
+	  <div>doc-id-one == <span wwpage:content="doc-id-one"></span></div>
+	  <div>doc-id-two == <span wwpage:content="doc-id-two"></span></div>  
+	  <div>Published == <span wwpage:content="pub-date"></span></div>
+	  --></footer></body></html>

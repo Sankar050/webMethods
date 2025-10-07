@@ -1,0 +1,53 @@
+{
+  "resources" : [ {
+    "wm.admin.internal.res.JobResource" : [ {
+      "method" : "runTestBasic",
+      "httpMethod" : "POST",
+      "urlTemplate" : "/admin/utf/execution/basic",
+      "input" : "wm.admin.internal.rec.BasicExecIn",
+      "output" : "wm.admin.internal.rec.BasicExecOut"
+    }, {
+      "method" : "runTestRegular",
+      "httpMethod" : "POST",
+      "urlTemplate" : "/admin/utf/execution",
+      "input" : "wm.admin.internal.rec.RegularExecIn",
+      "output" : "wm.admin.internal.rec.RegularExecOut"
+    }, {
+      "method" : "pullReportStream",
+      "httpMethod" : "GET",
+      "urlTemplate" : "/admin/utf/report/stream/{executionID}",
+      "input" : "",
+      "output" : "wm.admin.internal.rec.PullReportsOut"
+    }, {
+      "method" : "pullLatestReport",
+      "httpMethod" : "GET",
+      "urlTemplate" : "/admin/utf/latestreport/stream",
+      "input" : "",
+      "output" : "wm.admin.internal.rec.PullReportsOut"
+    }, {
+      "method" : "waitAndPullReports",
+      "httpMethod" : "GET",
+      "urlTemplate" : "/admin/utf/waitforreport/stream/{executionID}",
+      "input" : "wm.admin.internal.rec.WaitForReportIn",
+      "output" : "wm.admin.internal.rec.PullReportsOut"
+    }, {
+      "method" : "checkStatus",
+      "httpMethod" : "GET",
+      "urlTemplate" : "/admin/utf/execution/checkstatus/{executionID}",
+      "input" : "",
+      "output" : "wm.admin.internal.rec.CheckStatusOut"
+    }, {
+      "method" : "pullReportText",
+      "httpMethod" : "GET",
+      "urlTemplate" : "/admin/utf/report/text/{executionID}",
+      "input" : "",
+      "output" : "wm.admin.internal.rec.PullTextReportsOut"
+    }, {
+      "method" : "pullReportJUnitXml",
+      "httpMethod" : "GET",
+      "urlTemplate" : "/admin/utf/report/junitxml/{executionID}",
+      "input" : "",
+      "output" : "wm.admin.internal.rec.PullTextReportsOut"
+    } ]
+  } ]
+}

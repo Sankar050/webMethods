@@ -1,0 +1,121 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" data-highlight-require-whitespace="true" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>STS</title><link rel="Prev" href="CloudStreams_VS.html" title="Previous" /><link rel="Next" href="CloudStreams_Fault.html" title="Next" /><link rel="StyleSheet" href="css/_cloudstreams_online_help.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/social.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" /><!--[if IE 7]><link rel="StyleSheet" href="css/_cloudstreams_online_help_IE7.css" type="text/css" media="all" /><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print" /><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if ((window === window.top) && (window.navigator.userAgent.indexOf('bot/') === -1)) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/cloudstreams-is-onlinehelp/CloudStreams_STS.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script></head><body id="pORYtW7RMdXwglt4Ol9QEpQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/cloudstreams-is-onlinehelp/CloudStreams_STS.html');"><header id="wwconnect_header"><!-- Produkt Name und Version in Breadcrumbs SQ --><div class="ww_skin_breadcrumbs"><span>CloudStreams</span>&nbsp;11.1 |
+		     <span class="ww_skin_breadcrumbs_parent"><a href="../cloudstreams-is-onlinehelp/CloudStreams_ScreensIntro.html#wwconnect_header">CloudStreams Configuration Screens</a></span><span class="ww_skin_breadcrumbs_divider"> | </span><span class="ww_skin_breadcrumbs_current">STS</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a></div></header><div id="wwID0ENPBG" class="Heading_1">STS</div><div id="wwID0ETQBG" class="Body"><span class="ph">CloudStreams</span> can act as a Security Token Service (STS) client. You can use <span class="ph">CloudStreams</span>’s default STS, <span class="uicontrol">DefaultSTS</span>, by selecting this option on this screen. Alternatively, you can use a third-party STS that has been defined in the <span class="ph">Integration Server</span> (and described in the <span class="Citation">Web Services Developer's Guide</span>, in the section <span class="Citation">Securing Web Services Using Policies Based on WS-SecurityPolicy</span>).</div><div id="wwID0EYRBG" class="Body">To open the <span class="uicontrol">STS</span> options screen, click <span class="uicontrol">Solutions &gt; CloudStreams &gt; Administration &gt; STS</span> in the navigation panel.</div><div id="wwID0EGSBG" class="Body">To use a third-party STS, click <span class="uicontrol">Add new STS configuration</span> on this screen and complete the <span class="wintitle">Add New STS Configuration</span> page as follows.</div><div id="wwID0E3SBG" class="Section_Title">STS Configuration</div><div id="wwID0EJTBG" class="Definition_Term">Name</div><div id="wwID0EOTBG" class="Definition_Description">A unique name for the STS being configured. If this value is changed after creating an STS, the previous STS configuration will be deleted and replaced with the new one.</div><div id="wwID0EYTBG" class="Definition_Term">Endpoint</div><div id="wwID0E4TBG" class="Definition_Description">The STS endpoint to which the WS-Trust request will be sent by <span class="ph">CloudStreams</span> to obtain the SAML token.</div><div id="wwID0EOUBG" class="Definition_Term">Token Type</div><div id="wwID0ETUBG" class="Definition_Description">The type of token that <span class="ph">CloudStreams</span> should request from the STS. Value can be SAML_11 or SAML_20.</div><div id="wwID0E5UBG" class="Note_1"><span class="Bold">Note:<br /></span>Currently the default <span class="ph">Integration Server</span> STS only supports issuing SAML 2.0 Sender-vouches tokens.</div><div id="wwID0EAWBG" class="Definition_Term">WS-Trust Version</div><div id="wwID0EFWBG" class="Definition_Description">The version of WS-Trust that <span class="ph">CloudStreams</span> should use to send the RST to the SAML Issuer. Value can be VERSION_05_02 or VERSION_05_12.</div><div id="wwID0EWWBG" class="Definition_Term">Time-To-Live (TTL)</div><div id="wwID0E2WBG" class="Definition_Description">Indicates the time-to-live value in seconds that will be specified in the RST. If not specified, the default is 300 seconds (5 minutes).</div><div id="wwID0EFXBG" class="Definition_Term">Keystore</div><div id="wwID0EKXBG" class="Definition_Description">Select a keystore that has been configured in <span class="ph">Integration Server</span>. To configure a keystore in <span class="ph">Integration Server</span>, see the section <span class="Citation">Securing Communications with the Server</span> in the <span class="Citation">webMethods Integration Server Administrator's Guide</span>.</div><div id="wwID0ELYBG" class="Definition_Term">Sign Request/Signing Alias</div><div id="wwID0EQYBG" class="Definition_Description">Select <span class="uicontrol">Sign Request</span> if the STS requires a signed request, and specify the signing alias in the <span class="uicontrol">Signing Alias</span> field.</div><div id="wwID0EDZBG" class="Definition_Term">Encrypt Request/Encryption Alias</div><div id="wwID0EIZBG" class="Definition_Description">Select <span class="uicontrol">Encrypt Request</span> if the STS requires an encrypted request, and specify the encryption alias in the <span class="uicontrol">Encryption Alias</span> field.</div><div id="wwID0E2ZBG" class="Definition_Term">HTTP Basic Authentication</div><div id="wwID0EA1BG" class="Definition_Description">If the STS requires authentication, enter the HTTP Basic Authentication <span class="uicontrol">Username</span> and <span class="uicontrol">Password</span>.</div><div id="wwID0ET1BG" class="Definition_Term">WS-Security Username Token</div><div id="wwID0EY1BG" class="Definition_Description">The WS-Security username token to send to the STS. Also specify the <span class="uicontrol">Username</span>, username's <span class="uicontrol">Password</span>, and <span class="uicontrol">Password Type</span> (None, Text, or Digest).</div><div id="wwID0EM2BG" class="Body">Next, configure the desired virtual services so they can use the STS. To do this, write an IS service that includes the predefined Java service <span class="apiname">pub.cloudstreams.security.ws.AddSamlSenderVouchesToken</span> and invoke this IS service in the <span class="Quote">In Sequence</span> step of the virtual service. This service must reference an STS that is identified in <span class="ph">CloudStreams</span>. For details about the <span class="apiname">AddSamlSenderVouchesToken</span> service, see the topic <span class="Citation">Using the Security API in IS Services</span> in the document <span class="Citation">Administering webMethods CloudStreams</span>.</div><div id="wwID0ER3BG" class="Note"><span class="Bold">Note:</span>&nbsp;</div><div id="wwID0EF4BG" class="Body_-_Note">If you selected <span class="ph">Integration Server</span>’s default STS (<span class="uicontrol">DefaultSTS</span>), edit the default STS's configuration file to specify the keystore and alias so that the STS can sign the SAML assertion that it is issuing. Use the file's comments as a guide to configure this file for your system. The configuration file is located here:</div><div id="wwID0EW4BG" class="Body"><span class="filepath_002c_varname">IntegrationServer_directory</span><span class="filepath">\config\security\saml\esb_sts.xml</span></div><div id="wwID0EP5BG" class="title">Related Topics</div><div id="wwID0ET5BG" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_General.html#wwID0EXAAE"
+   
+     title="General"
+    ><span class="Link_Text">General</span></a></div><div id="wwID0EA6BG" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Email.html#wwID0EEFAG"
+   
+     title="Email"
+    ><span class="Link_Text">Email</span></a></div><div id="wwID0EN6BG" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Database.html#wwID0EOWAG"
+   
+     title="Database"
+    ><span class="Link_Text">Database</span></a></div><div id="wwID0E16BG" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_VS.html#wwID0EBHBG"
+   
+     title="Virtual Services"
+    ><span class="Link_Text">Virtual Services</span></a></div><div id="wwID0EIAAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Fault.html#wwID0E6CAI"
+   
+     title="Service Fault Configuration"
+    ><span class="Link_Text">Service Fault Configuration</span></a></div><div id="wwID0EVAAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Consumers.html#wwID0EM2AI"
+   
+     title="Consumers"
+    ><span class="Link_Text">Consumers</span></a></div><div id="wwID0ECBAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_OAuth.html#wwID0EQNBI"
+   
+     title="OAuth Tokens"
+    ><span class="Link_Text">OAuth Tokens</span></a></div><div id="wwID0EPBAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Providers.html#wwID0EGDCI"
+   
+     title="Providers"
+    ><span class="Link_Text">Providers</span></a></div><div id="wwID0E3BAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_StreamingProviders.html#wwID0EZQCI"
+   
+     title="Streaming Providers"
+    ><span class="Link_Text">Streaming Providers</span></a></div><div id="wwID0EJCAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_StreamingSubscribers.html#wwID0EPEDI"
+   
+     title="Streaming Subscribers"
+    ><span class="Link_Text">Streaming Subscribers</span></a></div><footer><!-- Related Topics --><!--                --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><!-- SQ insert Footer --><br /><hr style="border:1px solid; border-color: #1776BF; " /><!-- FRWE: Why is the font family information hard-coded?? --><div style="font-family: 'Roboto', Sans-Serif; font-size: 10px; margin-top: 6px; margin-bottom: 6px; text-align: center;">
+      Copyright&nbsp;Super iPaaS Integration LLC, an IBM Company&nbsp;2024 
+     </div><!-- SQ insert Date 
+	 <div style="text-align: center; font-weight: bold;" wwpage:content="pub-date">January 1, 2015</div> --><!-- old Footer 2016
+	  <div class="footer">Copyright &#169; <span wwpage:content="sag:product-copyrfirst"></span>, <span wwpage:content="sag:organization-copyrholder"></span>, <a href="http://sag.com/" wwpage:attribute-href="sag:organization-url" wwpage:content="sag:organization-url">http://sag.com/</a>
+   --><!-- SQ Variablen --><!-- Copyright Test --><!--	  <div style="text-decoration: underline">Copyright Import Test:</div>
+	  <wwpage:Import wwpage:content-from-file="Copyright/copyright_en.asp" />
+	  <br></br>--><!--
+	  <!-\- SQ Variables - Information from xresources -\->
+	  <div style="text-decoration: underline">From xresources:</div>
+	  <div>sag:organization-id == <span wwpage:content="sag:organization-id"></span></div>
+	  <div>sag:organization-name == <span wwpage:content="sag:organization-name"></span></div>
+	  <div>sag:organization-copyrholder == <span wwpage:content="sag:organization-copyrholder"></span></div>
+	  <div>sag:organization-url == <span wwpage:content="sag:organization-url"></span></div>
+	  
+	  <div>sag:family-id == <span wwpage:content="sag:family-id"></span></div>
+	  <div>sag:family-name == <span wwpage:content="sag:family-name"></span></div>
+	  <div>sag:family-organization == <span wwpage:content="sag:family-organization"></span></div>
+	  
+	  <div>sag:product-id == <span wwpage:content="sag:product-id"></span></div>
+	  <div>sag:product-name == <span wwpage:content="sag:product-name"></span></div>
+	  <div>sag:product-copyrfirst == <span wwpage:content="sag:product-copyrfirst"></span></div>
+	  <div>sag:product-family == <span wwpage:content="sag:product-family"></span></div>
+	  
+	  <!-\- SQ Variables - Values from DITA-Map and Keymap-\->
+	  <br></br>
+	  <div style="text-decoration: underline">From DITA/Book-Map:</div>
+	  <div>ProdInfo Prodname == <span wwpage:replace="wwvars:ProdInfoProdName"></span></div>
+	  <div>ProdInfo Mod First == <span wwpage:replace="wwvars:ProdInfoModFirst"></span></div>
+	  <div>ProdInfo Mod Last == <span wwpage:replace="wwvars:ProdInfoModLast"></span></div>
+	  <div>ProdInfo Rel First == <span wwpage:replace="wwvars:ProdInfoRelFirst"></span></div>
+	  <div>ProdInfo Rel Last == <span wwpage:replace="wwvars:ProdInfoRelLast"></span></div>
+	  <div>ProdInfo Vers First == <span wwpage:replace="wwvars:ProdInfoVersFirst"></span></div>
+	  <div>ProdInfo Vers Last == <span wwpage:replace="wwvars:ProdInfoVersLast"></span></div>
+	  <div>ProdInfo vrm vers.rel.mod == <span wwpage:replace="wwvars:ProdInfoVersFirst"></span>.<span wwpage:replace="wwvars:ProdInfoRelLast"></span>.<span wwpage:replace="wwvars:ProdInfoModLast"></span></div>
+	  <div>BookID PartNo == <span wwpage:replace="wwvars:BookPartNo"></span></div>
+	  <div>othermeta release-version == <span wwpage:replace="wwvars:ReleaseVersion"></span></div>
+	  <div>othermeta release-date == <span wwpage:replace="wwvars:ReleaseDate"></span></div>
+	  <div>othermeta release-edition == <span wwpage:replace="wwvars:ReleaseEdition"></span></div>
+	  <div>othermeta product == <span wwpage:replace="wwvars:Product"></span></div>
+	  <br></br>
+	  <div style="text-decoration: underline">From x_runtime/keymap.ditamap:</div>
+	  <div>sag:product-shortname == <span wwpage:replace="wwvars:sag:product-shortname"></span></div>
+	  <div>sag:product-longname == <span wwpage:replace="wwvars:sag:product-longname"></span></div>
+	  <div>versionAdd == <span wwpage:replace="wwvars:versionAdd"></span></div>
+	  <div>yearFYLY == <span wwpage:replace="wwvars:yearFYLY"></span></div>
+	  <div>fingerprint == <span wwpage:replace="wwvars:fingerprint"></span></div>
+	  <div>sag:CopyrightDeclaration == <span wwpage:replace="wwvars:sag:CopyrightDeclaration"></span></div>
+	  <div>pdfReleaseDate == <span wwpage:replace="wwvars:pdfReleaseDate"></span></div>
+	  <div>documentID == <span wwpage:replace="wwvars:documentID"></span></div>
+	  <br></br>
+	  <div style="text-decoration: underline">Reserve:</div>
+	  <div>organization == <span wwpage:content="organization"></span></div>
+	  <div>product-name == <span wwpage:content="product-name"></span></div>
+	  <div>copyright-first == <span wwpage:content="copyright-first"></span></div>
+	  <div>copyright-last == <span wwpage:content="copyright-last"></span></div>
+	  <div>copyright-first-b == <span wwpage:content="wwvars:copyright-first-b"></span></div>
+	  <div>copyright-last-b == <span wwpage:content="copyright-last-b"></span></div>
+	  <div>doc-id-one == <span wwpage:content="doc-id-one"></span></div>
+	  <div>doc-id-two == <span wwpage:content="doc-id-two"></span></div>  
+	  <div>Published == <span wwpage:content="pub-date"></span></div>
+	  --></footer></body></html>

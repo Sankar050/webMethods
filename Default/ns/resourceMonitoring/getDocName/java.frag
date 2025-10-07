@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getDocName</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgY3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vyc29yKCk7DQogICAgICAgICAgIA0K
+Ly8gVGFrZSB0aGUgaW5wdXQgJ2NvdW50cnknIGRvY3VtZW50DQpJRGF0YSBjb3VudHJ5ID0gSURh
+dGFVdGlsLmdldElEYXRhKGN1cnNvciwgImNvdW50cnkiKTsNCmlmIChjb3VudHJ5ICE9IG51bGwp
+IHsNCiAgICBJRGF0YUN1cnNvciBjQ3Vyc29yID0gY291bnRyeS5nZXRDdXJzb3IoKTsNCiAgICBp
+ZiAoY0N1cnNvci5uZXh0KCkpIHsNCiAgICAgICAgLy8gRmlyc3Qga2V5IHdpbGwgYmUgIkluZGlh
+Ig0KICAgICAgICBTdHJpbmcgbmFtZSA9IGNDdXJzb3IuZ2V0S2V5KCk7DQogICAgICAgIElEYXRh
+VXRpbC5wdXQoY3Vyc29yLCAiY291bnRyeU5hbWUiLCBuYW1lKTsNCiAgICB9DQogICAgY0N1cnNv
+ci5kZXN0cm95KCk7DQp9</value>
+</Values>

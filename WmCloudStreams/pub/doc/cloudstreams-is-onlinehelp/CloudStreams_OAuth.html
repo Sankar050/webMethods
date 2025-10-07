@@ -1,0 +1,121 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" data-highlight-require-whitespace="true" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>OAuth Tokens</title><link rel="Prev" href="CloudStreams_Consumers.html" title="Previous" /><link rel="Next" href="CloudStreams_Providers.html" title="Next" /><link rel="StyleSheet" href="css/_cloudstreams_online_help.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/social.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" /><!--[if IE 7]><link rel="StyleSheet" href="css/_cloudstreams_online_help_IE7.css" type="text/css" media="all" /><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print" /><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if ((window === window.top) && (window.navigator.userAgent.indexOf('bot/') === -1)) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/cloudstreams-is-onlinehelp/CloudStreams_OAuth.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script></head><body id="pq4aJSGu_002fI4olWcry5uSwDA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/cloudstreams-is-onlinehelp/CloudStreams_OAuth.html');"><header id="wwconnect_header"><!-- Produkt Name und Version in Breadcrumbs SQ --><div class="ww_skin_breadcrumbs"><span>CloudStreams</span>&nbsp;11.1 |
+		     <span class="ww_skin_breadcrumbs_parent"><a href="../cloudstreams-is-onlinehelp/CloudStreams_ScreensIntro.html#wwconnect_header">CloudStreams Configuration Screens</a></span><span class="ww_skin_breadcrumbs_divider"> | </span><span class="ww_skin_breadcrumbs_current">OAuth Tokens</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a></div></header><div id="wwID0EQNBI" class="Heading_1">OAuth Tokens</div><div id="wwID0EWOBI" class="Body">If you are setting the <span class="uicontrol">Authentication Type</span> field to <span class="uicontrol">OAuth</span> on the <span class="wintitle">Streaming Providers</span> screen, you need to set the options here, on the <span class="wintitle">OAuth Access Tokens</span> screen.</div><div id="wwID0EOPBI" class="Body">If OAuth is used as an authentication mechanism, you must create an alias containing the OAuth details. For example, when a Streaming Provider is created that will use OAuth, the provider details include an OAuth alias. When OAuth is chosen on the <span class="wintitle">Streaming Providers</span> page, an alias must be selected from a drop-down list of OAuth Token aliases that are currently defined. At run time, the OAuth alias is used to lookup parameters, for example, the Access Token, and so on, that are used to establish the connection with the provider.</div><div id="wwID0EZPBI" class="Body">OAuth is a scheme to limit the need for user credentials when operating on behalf of a resource owner. Instead of using the owner's credentials at run time, an Access Token is used. Prior to run time, the owner and user engage in a <span class="Quote">dance</span> with a Resource Server and an Authorization Server to obtain an Access Token that will grant the user limited access to resources controlled by the owner. The precise steps in the dance vary with the OAuth version, the provider (Salesforce versus Twitter), and the OAuth grant scheme (<span class="Quote">two-legged dance</span> versus <span class="Quote">three-legged dance</span>). Given this variation and the complexity of this process, <span class="ph">CloudStreams</span> assumes that proper OAuth fields are obtained and the tokens and other properties are stored for use at run time.</div><div id="wwID0EUQBI" class="Body">Some of the information that is stored is considered to be sensitive and is stored securely, just as a password would be.</div><div id="wwID0EZQBI" class="Body">Currently, the supported OAuth versions are v1.0a, v2.0, and v2.1. The parameters stored with an alias differ across these versions, although there is significant overlap.</div><div id="wwID0E5QBI" class="Body">To open the OAuth Tokens options screen, click <span class="uicontrol">Solutions &gt; CloudStreams &gt; Administration &gt; OAuth Tokens</span> in the navigation panel.</div><div id="wwID0EPRBI" class="Section_Title">OAuth Token Configuration</div><div id="wwID0E3RBI" class="Definition_Term">Name</div><div id="wwID0EBSBI" class="Definition_Description">A unique string to identify a collection of alias token parameters.</div><div id="wwID0ELSBI" class="Definition_Term">Provider</div><div id="wwID0EQSBI" class="Definition_Description">Identifies the OAuth provider, for example, Salesforce or Twitter.</div><div id="wwID0E1SBI" class="Definition_Term">OAuth Version</div><div id="wwID0E6SBI" class="Definition_Description">Select the OAuth version, V1.0a or V2.0.</div><div id="wwID0EJTBI" class="Definition_Term">Consumer ID</div><div id="wwID0EOTBI" class="Definition_Description">The 'Consumer Key' issued by the Service Provider and used by the consumer to identify itself to the Service Provider. In OAuth 2.0, this is a 'client identifier' issued to the client to identify itself to the authorization server. Also referred to as the “Client ID”.</div><div id="wwID0EYTBI" class="Definition_Term">Consumer Secret</div><div id="wwID0E4TBI" class="Definition_Description">In OAuth 2.0, this is an optional field. This is a secret used by the Consumer to establish ownership of the "Consumer Key" and is a secret matching to the "client identifier". It is also referred to as the "Client Secret".</div><div id="wwID0EHUBI" class="Definition_Term">Access Token</div><div id="wwID0EMUBI" class="Definition_Description">The token used for authentication, instead of other credentials, that is, a value used by the Consumer to gain access to the Protected Resources on behalf of the User, instead of using the User's Service Provider credentials. This token is issued by the Authorization Server. The process for obtaining a token varies with the version, vendor, and OAuth grant type.</div><div id="wwID0ERUBI" class="Definition_Description">For OAuth 2.0, <span class="ph">CloudStreams</span> uses the keystore and truststore specified in the <span class="uicontrol">CloudStreams &gt; Administration &gt; General</span> tab when making a connection to the third-party OAuth 2.0-based service provider to refresh the access token. The refresh URL is almost always SSL-based, so the truststore specified in <span class="ph">CloudStreams</span> will be used during the SSL handshake to verify the provider certificate. If the provider requires two-way SSL authentication, then the keystore specified in <span class="ph">CloudStreams</span> will be used to provide the client certificates. For details about the keystore and truststore specified in <span class="ph">CloudStreams</span>, see <span class="Citation">The General Options Screen</span>.</div><div id="wwID0EYVBI" class="Definition_Description">If a truststore is <span class="emphasis">not</span> specified in the <span class="uicontrol">CloudStreams &gt; Administration &gt; General</span> tab, <span class="ph">CloudStreams</span> uses the default truststore for the jvm (cacerts). This might be a problem if you have defined the default truststore to only contain specific certificates, because if that alias is defined, well-known certificates will not be included when defining the trust. In this case, ensure that the truststore alias keystore includes the certs necessary to trust the URLs defined in this field too.</div><div id="wwID0ETWBI" class="Definition_Term">Access Token Secret</div><div id="wwID0EYWBI" class="Definition_Description">Issued with the v1.0a Access Token only. A secret used by the Consumer to establish ownership of a given 'Access Token'. Secrets are used to sign the requests.</div><div id="wwID0ECXBI" class="Definition_Term">Instance URL</div><div id="wwID0EHXBI" class="Definition_Description">This is an optional field and is used to specify a runtime host, if applicable. This may be required in some back ends like Salesforce.</div><div id="wwID0ERXBI" class="Definition_Term">Refresh Access Token</div><div id="wwID0EWXBI" class="Definition_Description">Option to refresh the 'Access Token'. OAuth 2.0 access tokens typically have a very short lifetime. When an access token expires, the OAuth profile does not automatically refresh the expired access token. Select this option if you want an expired access token to be refreshed automatically. If you select this option, you must also specify the <span class="uicontrol">Refresh Token</span> and <span class="uicontrol">Refresh URL</span>.</div><div id="wwID0EDYBI" class="Definition_Description">The access token is refreshed whenever the session expires. Session expiration is handled according to the setting of the <span class="emphasis">Session Management</span> property in your connection. If Session Management is set to "none", then you must manually modify the access token in the OAuth alias. The <span class="uicontrol">Refresh Access Token</span> option will not be applicable in this case.</div><div id="wwID0EYYBI" class="Definition_Term">Refresh Token</div><div id="wwID0E4YBI" class="Definition_Description">Issued with the v2.0 Access Token only. Required only if <span class="uicontrol">Refresh Access Token</span> is enabled. A token used by the client to obtain a new access token without having to involve the resource owner. This is a required field when 'Refresh Access Token' is enabled.</div><div id="wwID0EMZBI" class="Definition_Term">Refresh URL</div><div id="wwID0ERZBI" class="Definition_Description">Available only if <span class="uicontrol">Refresh Access Token</span> is enabled. The provider specific URL to refresh an 'Access Token'. This is a required field when 'Refresh Access Token' is enabled.</div><div id="wwID0EC1BI" class="Definition_Term">Refresh URL Request</div><div id="wwID0EH1BI" class="Definition_Description">Options for sending the parameters, for example, refresh_token, grant_type, client_id, and client_secret required by an access token refresh (HTTP POST) request. Available only if <span class="uicontrol">Refresh Access Token</span> is selected.</div><div id="wwID0EQ1BI" class="Definition_Description">The available options are:</div><div id="wwID0EZ1BI" class="List_2"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span><span class="uicontrol">URL Query String</span>: The refresh request parameters, for example, refresh_token, grant_type, and so on, and their values are sent as query strings in the URL of the POST request.</div><div id="wwID0EN2BI" class="List_2_Continued">Example:</div><div id="wwID0ES2BI" class="Preformatted_2">www.examplebackend.com/o/oauth2/token?grant_type= <br />refresh_token&amp;client_id=842428530070-pubfebfgfqkgj6t54m4ns6 <br />&amp;client_secret=4adQT95cAtUxWINbDxGP9SJ4&amp;refresh_token= <br />1%2Fn072P4BXpuNObjCLUtiZTc4fMH6YersmxBIv8QN3bhw</div><div id="wwID0EZ2BI" class="List_2"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span><span class="uicontrol">Body Query String</span>: The refresh request parameters, for example, refresh_token, grant_type, and so on, and their values are sent as query strings in the body of the POST request.</div><div id="wwID0EN3BI" class="List_2_Continued">Example:</div><div id="wwID0ES3BI" class="Preformatted_2">POST /o/oauth2/token HTTP/1.1 <br />Host: accounts.backend.com <br />Content-length: 163 <br />content-type: application/x-www-form-urlencoded <br /> <br />client_secret4adQT95cAtUxWINbDxGP9SJ4&amp;grant_type=refresh_token&amp;refresh_token=1%2Fn072P4BXpuNObjCLUtiZTc4fMH6YersmxBIv8QN3bhw&amp;client_id=407408718192</div><div id="wwID0EZ3BI" class="List_2"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span><span class="uicontrol">Custom ESB Service</span>: If the back end requires the refresh request in a custom format, for example, requests which need more parameters than the ones specified by OAuth v2.0, or the back end uses some custom way of organizing parameters, or expects some other HTTP method request (other than POST), use the ‘Custom ESB Service’ option. If you select this option, you must specify the name of your custom service in the ‘Service Name’ field.</div><div id="wwID0EU4BI" class="Definition_Term">Service Name</div><div id="wwID0EZ4BI" class="Definition_Description">User implemented service for refreshing the 'Access Token'. This is required when the 'Custom ESB Service' option is selected as the 'Refresh URL Request'. This service must strictly conform to the following specification:</div><div id="wwID0ED5BI" class="Preformatted_1">- wm.cloudstreams.service.common.lookup.specs: <br />oauthTokenRefreshServiceSpec</div><div id="wwID0EX5BI" class="title">Related Topics</div><div id="wwID0E25BI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_General.html#wwID0EXAAE"
+   
+     title="General"
+    ><span class="Link_Text">General</span></a></div><div id="wwID0EI6BI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Email.html#wwID0EEFAG"
+   
+     title="Email"
+    ><span class="Link_Text">Email</span></a></div><div id="wwID0EV6BI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Database.html#wwID0EOWAG"
+   
+     title="Database"
+    ><span class="Link_Text">Database</span></a></div><div id="wwID0ECACI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_VS.html#wwID0EBHBG"
+   
+     title="Virtual Services"
+    ><span class="Link_Text">Virtual Services</span></a></div><div id="wwID0EPACI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_STS.html#wwID0ENPBG"
+   
+     title="STS"
+    ><span class="Link_Text">STS</span></a></div><div id="wwID0E3ACI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Fault.html#wwID0E6CAI"
+   
+     title="Service Fault Configuration"
+    ><span class="Link_Text">Service Fault Configuration</span></a></div><div id="wwID0EJBCI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Consumers.html#wwID0EM2AI"
+   
+     title="Consumers"
+    ><span class="Link_Text">Consumers</span></a></div><div id="wwID0EWBCI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Providers.html#wwID0EGDCI"
+   
+     title="Providers"
+    ><span class="Link_Text">Providers</span></a></div><div id="wwID0EDCCI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_StreamingProviders.html#wwID0EZQCI"
+   
+     title="Streaming Providers"
+    ><span class="Link_Text">Streaming Providers</span></a></div><div id="wwID0EQCCI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_StreamingSubscribers.html#wwID0EPEDI"
+   
+     title="Streaming Subscribers"
+    ><span class="Link_Text">Streaming Subscribers</span></a></div><footer><!-- Related Topics --><!--                --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><!-- SQ insert Footer --><br /><hr style="border:1px solid; border-color: #1776BF; " /><!-- FRWE: Why is the font family information hard-coded?? --><div style="font-family: 'Roboto', Sans-Serif; font-size: 10px; margin-top: 6px; margin-bottom: 6px; text-align: center;">
+      Copyright&nbsp;Super iPaaS Integration LLC, an IBM Company&nbsp;2024 
+     </div><!-- SQ insert Date 
+	 <div style="text-align: center; font-weight: bold;" wwpage:content="pub-date">January 1, 2015</div> --><!-- old Footer 2016
+	  <div class="footer">Copyright &#169; <span wwpage:content="sag:product-copyrfirst"></span>, <span wwpage:content="sag:organization-copyrholder"></span>, <a href="http://sag.com/" wwpage:attribute-href="sag:organization-url" wwpage:content="sag:organization-url">http://sag.com/</a>
+   --><!-- SQ Variablen --><!-- Copyright Test --><!--	  <div style="text-decoration: underline">Copyright Import Test:</div>
+	  <wwpage:Import wwpage:content-from-file="Copyright/copyright_en.asp" />
+	  <br></br>--><!--
+	  <!-\- SQ Variables - Information from xresources -\->
+	  <div style="text-decoration: underline">From xresources:</div>
+	  <div>sag:organization-id == <span wwpage:content="sag:organization-id"></span></div>
+	  <div>sag:organization-name == <span wwpage:content="sag:organization-name"></span></div>
+	  <div>sag:organization-copyrholder == <span wwpage:content="sag:organization-copyrholder"></span></div>
+	  <div>sag:organization-url == <span wwpage:content="sag:organization-url"></span></div>
+	  
+	  <div>sag:family-id == <span wwpage:content="sag:family-id"></span></div>
+	  <div>sag:family-name == <span wwpage:content="sag:family-name"></span></div>
+	  <div>sag:family-organization == <span wwpage:content="sag:family-organization"></span></div>
+	  
+	  <div>sag:product-id == <span wwpage:content="sag:product-id"></span></div>
+	  <div>sag:product-name == <span wwpage:content="sag:product-name"></span></div>
+	  <div>sag:product-copyrfirst == <span wwpage:content="sag:product-copyrfirst"></span></div>
+	  <div>sag:product-family == <span wwpage:content="sag:product-family"></span></div>
+	  
+	  <!-\- SQ Variables - Values from DITA-Map and Keymap-\->
+	  <br></br>
+	  <div style="text-decoration: underline">From DITA/Book-Map:</div>
+	  <div>ProdInfo Prodname == <span wwpage:replace="wwvars:ProdInfoProdName"></span></div>
+	  <div>ProdInfo Mod First == <span wwpage:replace="wwvars:ProdInfoModFirst"></span></div>
+	  <div>ProdInfo Mod Last == <span wwpage:replace="wwvars:ProdInfoModLast"></span></div>
+	  <div>ProdInfo Rel First == <span wwpage:replace="wwvars:ProdInfoRelFirst"></span></div>
+	  <div>ProdInfo Rel Last == <span wwpage:replace="wwvars:ProdInfoRelLast"></span></div>
+	  <div>ProdInfo Vers First == <span wwpage:replace="wwvars:ProdInfoVersFirst"></span></div>
+	  <div>ProdInfo Vers Last == <span wwpage:replace="wwvars:ProdInfoVersLast"></span></div>
+	  <div>ProdInfo vrm vers.rel.mod == <span wwpage:replace="wwvars:ProdInfoVersFirst"></span>.<span wwpage:replace="wwvars:ProdInfoRelLast"></span>.<span wwpage:replace="wwvars:ProdInfoModLast"></span></div>
+	  <div>BookID PartNo == <span wwpage:replace="wwvars:BookPartNo"></span></div>
+	  <div>othermeta release-version == <span wwpage:replace="wwvars:ReleaseVersion"></span></div>
+	  <div>othermeta release-date == <span wwpage:replace="wwvars:ReleaseDate"></span></div>
+	  <div>othermeta release-edition == <span wwpage:replace="wwvars:ReleaseEdition"></span></div>
+	  <div>othermeta product == <span wwpage:replace="wwvars:Product"></span></div>
+	  <br></br>
+	  <div style="text-decoration: underline">From x_runtime/keymap.ditamap:</div>
+	  <div>sag:product-shortname == <span wwpage:replace="wwvars:sag:product-shortname"></span></div>
+	  <div>sag:product-longname == <span wwpage:replace="wwvars:sag:product-longname"></span></div>
+	  <div>versionAdd == <span wwpage:replace="wwvars:versionAdd"></span></div>
+	  <div>yearFYLY == <span wwpage:replace="wwvars:yearFYLY"></span></div>
+	  <div>fingerprint == <span wwpage:replace="wwvars:fingerprint"></span></div>
+	  <div>sag:CopyrightDeclaration == <span wwpage:replace="wwvars:sag:CopyrightDeclaration"></span></div>
+	  <div>pdfReleaseDate == <span wwpage:replace="wwvars:pdfReleaseDate"></span></div>
+	  <div>documentID == <span wwpage:replace="wwvars:documentID"></span></div>
+	  <br></br>
+	  <div style="text-decoration: underline">Reserve:</div>
+	  <div>organization == <span wwpage:content="organization"></span></div>
+	  <div>product-name == <span wwpage:content="product-name"></span></div>
+	  <div>copyright-first == <span wwpage:content="copyright-first"></span></div>
+	  <div>copyright-last == <span wwpage:content="copyright-last"></span></div>
+	  <div>copyright-first-b == <span wwpage:content="wwvars:copyright-first-b"></span></div>
+	  <div>copyright-last-b == <span wwpage:content="copyright-last-b"></span></div>
+	  <div>doc-id-one == <span wwpage:content="doc-id-one"></span></div>
+	  <div>doc-id-two == <span wwpage:content="doc-id-two"></span></div>  
+	  <div>Published == <span wwpage:content="pub-date"></span></div>
+	  --></footer></body></html>

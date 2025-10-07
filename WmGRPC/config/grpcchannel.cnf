@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="GRPCDefault" javaclass="com.wm.util.Values">
+    <value name="name">GRPCDefault</value>
+    <value name="description">Default gRPC channel.</value>
+    <value name="port">50051</value>
+    <value name="isDefault">true</value>
+    <value name="packageName">WmGRPC</value>
+    <value name="keystoreAlias">DEFAULT_IS_KEYSTORE</value>
+    <value name="keystoreEntry">ssos</value>
+    <value name="truststoreAlias">DEFAULT_IS_TRUSTSTORE</value>
+    <value name="enabled">true</value>
+  </record>
+</Values>

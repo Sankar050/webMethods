@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">webMethods/trigger</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">filePoolingPOC:new_event_trigger</value>
+  <value name="node_pkg">filePoolingPOC</value>
+  <value name="is_public">false</value>
+  <value name="trigger_type">streaming-trigger</value>
+  <record name="trigger" javaclass="com.wm.util.Values">
+    <value name="auditOption">0</value>
+    <record name="auditSettings" javaclass="com.wm.util.Values">
+      <value name="document_data">0</value>
+      <value name="startExecution">false</value>
+      <value name="stopExecution">false</value>
+      <value name="onError">true</value>
+    </record>
+    <value name="uniqueId">cc+RyrvtIVqr0ehHYPn21hfVihw=</value>
+    <value name="executeUser">Administrator</value>
+    <value name="maxConsumers">1</value>
+    <value name="minConsumers">1</value>
+    <value name="consumerExpansionDelay">1</value>
+    <value name="consumerExpansionDelayUnit">MINUTES</value>
+    <value name="consumerCleanupDelay">2</value>
+    <value name="consumerCleanupDelayUnit">MINUTES</value>
+    <null name="clientId"/>
+    <value name="commitMode">CLIENT_ASYNC</value>
+    <value name="useParallelStreams">false</value>
+    <value name="onDisconnect">ROLLBACK</value>
+    <value name="pollingInterval">5</value>
+    <value name="pollingIntervalUnit">SECONDS</value>
+    <number name="pollingRequestSize" type="Integer">100</number>
+    <null name="aliasName"/>
+    <Boolean name="enabled">true</Boolean>
+    <value name="transientFailureAction">NONE</value>
+    <value name="failureAction">NONE</value>
+    <null name="resourceMonitorSvc"/>
+    <array name="source" type="record" depth="1">
+    </array>
+    <record name="window" javaclass="com.wm.util.Values">
+      <value name="type">SINGLE_EVENT</value>
+      <record name="parameters" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <array name="process" type="record" depth="1">
+    </array>
+  </record>
+  <value name="LOCK_REQUIRED">true</value>
+</Values>

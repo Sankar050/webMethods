@@ -1,0 +1,129 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" data-highlight-require-whitespace="true" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>Service Fault Configuration</title><link rel="Prev" href="CloudStreams_STS.html" title="Previous" /><link rel="Next" href="CloudStreams_Consumers.html" title="Next" /><link rel="StyleSheet" href="css/_cloudstreams_online_help.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/social.css" type="text/css" media="all" /><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" /><!--[if IE 7]><link rel="StyleSheet" href="css/_cloudstreams_online_help_IE7.css" type="text/css" media="all" /><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print" /><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if ((window === window.top) && (window.navigator.userAgent.indexOf('bot/') === -1)) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/cloudstreams-is-onlinehelp/CloudStreams_Fault.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script></head><body id="pIW_002fCypthEQSSmTcfgB5BGQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/cloudstreams-is-onlinehelp/CloudStreams_Fault.html');"><header id="wwconnect_header"><!-- Produkt Name und Version in Breadcrumbs SQ --><div class="ww_skin_breadcrumbs"><span>CloudStreams</span>&nbsp;11.1 |
+		     <span class="ww_skin_breadcrumbs_parent"><a href="../cloudstreams-is-onlinehelp/CloudStreams_ScreensIntro.html#wwconnect_header">CloudStreams Configuration Screens</a></span><span class="ww_skin_breadcrumbs_divider"> | </span><span class="ww_skin_breadcrumbs_current">Service Fault Configuration</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a></div></header><div id="wwID0E6CAI" class="Heading_1">Service Fault Configuration</div><div id="wwID0EFEAI" class="Note"><span class="Bold">Note:<br /></span>The service fault configuration options are intended only for virtual services, and not for connector virtual services. For information about error handling for connector virtual services, see the topic <span class="Citation">The Error Sequence Step (Connector Virtual Service, SOAP)</span> or <span class="Citation">The Error Sequence Step (Connector Virtual Service, REST)</span> in the document <span class="Citation">Administering webMethods CloudStreams</span>.</div><div id="wwID0EKFAI" class="Body">You can use these options to configure global error responses for all virtual services.</div><div id="wwID0EPFAI" class="Body">Alternatively, you can configure error responses for virtual services individually, in the services' <span class="Quote">Error Sequence</span> step, as described in the topic <span class="Citation">The Error Sequence Step (Connector Virtual Service, SOAP)</span> or <span class="Citation">The Error Sequence Step (Connector Virtual Service, REST)</span> in the <span class="Citation">Administering webMethods CloudStreams</span> document.</div><div id="wwID0EJGAI" class="Body">The precedence of the error messaging instructions is as follows:</div><div id="wwID0EUGAI" class="List_1"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span>If you create an <span class="Quote">Error Sequence</span> step for a virtual service, the error messaging step takes precedence over any settings on the <span class="wintitle">Service Fault Configuration</span> page.</div><div id="wwID0ERHAI" class="List_1"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span>If you do not create an <span class="Quote">Error Sequence</span> step for a virtual service, the settings on the <span class="wintitle">Service Fault Configuration</span> page take precedence.</div><div id="wwID0EPIAI" class="Body">To open the Service Fault Configuration screen, click <span class="uicontrol">Solutions &gt; CloudStreams &gt; Administration &gt; Service Fault Configuration</span> in the navigation panel.</div><div id="wwID0EAJAI" class="Section_Title">Service Fault Configuration</div><div id="wwID0ENJAI" class="Definition_Term">Default Fault Response</div><div id="wwID0ESJAI" class="Definition_Description">When you select this option, <span class="ph">CloudStreams</span> returns the following fault response to the consuming application:</div><div id="wwID0E4JAI" class="Definition_Description"><span class="codeph">CloudStreams encountered an error:$ERROR_MESSAGE while executing operation:$OPERATION service:$SERVICE at time:$TIME on date:$DATE. The client ip was:$CLIENT_IP. The current user:$USER. The consumer application:$CONSUMER_APPLICATION".</span></div><div id="wwID0EGKAI" class="Note_1"><span class="Bold">Note:<br /></span>When $CLIENT_IP is used, <span class="ph">CloudStreams</span> will replace $CLIENT_IP with the IP address of the client. For privacy concerns or to be in compliance with General Data Protection Regulation (GDPR), click <span class="uicontrol">Edit</span> and then delete the <span class="emphasis">"The client ip was:$CLIENT_IP."</span> string from the Service Fault Configuration template.</div><div id="wwID0EJLAI" class="Definition_Description">This fault response is returned in both of the following cases:</div><div id="wwID0EULAI" class="List_2"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span>When a fault is returned by the native service provider.</div><div id="wwID0EHMAI" class="List_2_Continued">In this case, the <span class="parmname">$ERROR_MESSAGE</span> variable in the fault response will contain the message produced by the provider's exception that caused the error. This is equivalent to the <span class="codeph">getMessage</span> call on the Java Exception. This maps to the 
+    <a href="http://www.w3.org/TR/2000/NOTE-SOAP-20000508/"
+   
+     target="external_window"
+    ><span class="heading-page">faultString</span></a> element for SOAP 1.1 or the 
+    <a href="http://www.w3.org/TR/soap12-part1/#soapfault"
+   
+     target="external_window"
+    ><span class="heading-page">Reason</span></a> element for SOAP 1.2 catch. For REST service calls, the message is returned inside an <span class="codeph">&lt;/Exception&gt;</span> tag. <span class="ph">CloudStreams</span> discards the native service provider's fault and does not return this content to the web service caller because it could be considered a security issue, especially if the native provider is returning a stack trace with its response.</div><div id="wwID0EVNAI" class="List_2"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span>When a fault is returned by internal <span class="ph">CloudStreams</span> exceptions (policy violation errors, cloud connection errors, and cloud connector service errors).</div><div id="wwID0EOOAI" class="List_2_Continued">In this case, the <span class="parmname">$ERROR_MESSAGE</span> variable will contain the error message generated by <span class="ph">CloudStreams</span>.</div><div id="wwID0EBPAI" class="Definition_Description">The default fault response contains predefined fault handler variables (<span class="parmname">$ERROR_MESSAGE</span>, <span class="parmname">$OPERATION</span>, and so on), which are described in the topic <span class="Citation">The Fault Handler Variables</span> in the document <span class="Citation">Administering webMethods CloudStreams</span>.</div><div id="wwID0E2PAI" class="Definition_Description">You can customize the default fault response using the following substitution variables, where <span class="ph">CloudStreams</span> replaces the variable reference with the real content at run time:</div><div id="wwID0ENQAI" class="List_2"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span>The predefined context variables listed in the topic <span class="Citation">The Predefined Context Variables</span> in the document <span class="Citation">Administering webMethods CloudStreams</span>.</div><div id="wwID0EKRAI" class="List_2"><span class="WebWorks_Number" style="width: 18pt"><span><img src="chapterTOC_bullet.png" alt="*" border="0" width="10" height="10" /></span></span>Custom context variables that you declare using the <span class="ph">CloudStreams</span> API (see the topic <span class="Citation">The API for Context Variables</span> in the document <span class="Citation">Administering webMethods CloudStreams</span>).</div><div id="wwID0EOSAI" class="Note_1"><span class="Bold">Note:<br /></span>If you want to reference a custom context variable that you have already defined in a context-based routing rule (as opposed to the one you have declared using <span class="ph">CloudStreams</span> API for context variables), then you must add the prefix <span class="userinput">$mx</span> to the variable name in order to reference the variable. For example, if you defined the variable <span class="userinput">TAXID</span>, you would reference it as <span class="userinput">$mx:TAXID</span>.</div><div id="wwID0E3TAI" class="Definition_Term">Send Native Provider Fault (when available)</div><div id="wwID0EBUAI" class="Definition_Description">When you select this option, <span class="ph">CloudStreams</span> sends the native service provider's fault content, if available. <span class="ph">CloudStreams</span> will send whatever content it received from the native service provider.</div><div id="wwID0ESUAI" class="Definition_Description">If you select this option, the <span class="uicontrol">Default Fault Response</span> is ignored when a fault is returned by the native service provider. (Faults returned by internal <span class="ph">CloudStreams</span> exceptions will still be handled by the <span class="uicontrol">Default Fault Response</span> option.)</div><div id="wwID0EGVAI" class="Note_1"><span class="Bold">Note:<br /></span>Unlike with SOAP specifications, there is no agreed upon format to suggest an error condition for REST services (that is, there is no element nested in a <span class="codeph">&lt;/soap:Fault&gt;</span> element nested in a <span class="codeph">&lt;/soap:Body&gt;</span>). <span class="ph">CloudStreams</span> assumes that REST services will follow HTTP conventions and return responses with return codes in the 200-299 range when service calls are successful. This is the only way <span class="ph">CloudStreams</span> can determine that a native provider's response should be interpreted as a failure.</div><div id="wwID0E4WAI" class="title">Related Topics</div><div id="wwID0EBXAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_General.html#wwID0EXAAE"
+   
+     title="General"
+    ><span class="Link_Text">General</span></a></div><div id="wwID0EOXAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Email.html#wwID0EEFAG"
+   
+     title="Email"
+    ><span class="Link_Text">Email</span></a></div><div id="wwID0E2XAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Database.html#wwID0EOWAG"
+   
+     title="Database"
+    ><span class="Link_Text">Database</span></a></div><div id="wwID0EIYAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_VS.html#wwID0EBHBG"
+   
+     title="Virtual Services"
+    ><span class="Link_Text">Virtual Services</span></a></div><div id="wwID0EVYAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_STS.html#wwID0ENPBG"
+   
+     title="STS"
+    ><span class="Link_Text">STS</span></a></div><div id="wwID0ECZAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Consumers.html#wwID0EM2AI"
+   
+     title="Consumers"
+    ><span class="Link_Text">Consumers</span></a></div><div id="wwID0EPZAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_OAuth.html#wwID0EQNBI"
+   
+     title="OAuth Tokens"
+    ><span class="Link_Text">OAuth Tokens</span></a></div><div id="wwID0E3ZAI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_Providers.html#wwID0EGDCI"
+   
+     title="Providers"
+    ><span class="Link_Text">Providers</span></a></div><div id="wwID0EJ1AI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_StreamingProviders.html#wwID0EZQCI"
+   
+     title="Streaming Providers"
+    ><span class="Link_Text">Streaming Providers</span></a></div><div id="wwID0EW1AI" class="heading-no-quotes">
+    <a href="../cloudstreams-is-onlinehelp/CloudStreams_StreamingSubscribers.html#wwID0EPEDI"
+   
+     title="Streaming Subscribers"
+    ><span class="Link_Text">Streaming Subscribers</span></a></div><footer><!-- Related Topics --><!--                --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><!-- SQ insert Footer --><br /><hr style="border:1px solid; border-color: #1776BF; " /><!-- FRWE: Why is the font family information hard-coded?? --><div style="font-family: 'Roboto', Sans-Serif; font-size: 10px; margin-top: 6px; margin-bottom: 6px; text-align: center;">
+      Copyright&nbsp;Super iPaaS Integration LLC, an IBM Company&nbsp;2024 
+     </div><!-- SQ insert Date 
+	 <div style="text-align: center; font-weight: bold;" wwpage:content="pub-date">January 1, 2015</div> --><!-- old Footer 2016
+	  <div class="footer">Copyright &#169; <span wwpage:content="sag:product-copyrfirst"></span>, <span wwpage:content="sag:organization-copyrholder"></span>, <a href="http://sag.com/" wwpage:attribute-href="sag:organization-url" wwpage:content="sag:organization-url">http://sag.com/</a>
+   --><!-- SQ Variablen --><!-- Copyright Test --><!--	  <div style="text-decoration: underline">Copyright Import Test:</div>
+	  <wwpage:Import wwpage:content-from-file="Copyright/copyright_en.asp" />
+	  <br></br>--><!--
+	  <!-\- SQ Variables - Information from xresources -\->
+	  <div style="text-decoration: underline">From xresources:</div>
+	  <div>sag:organization-id == <span wwpage:content="sag:organization-id"></span></div>
+	  <div>sag:organization-name == <span wwpage:content="sag:organization-name"></span></div>
+	  <div>sag:organization-copyrholder == <span wwpage:content="sag:organization-copyrholder"></span></div>
+	  <div>sag:organization-url == <span wwpage:content="sag:organization-url"></span></div>
+	  
+	  <div>sag:family-id == <span wwpage:content="sag:family-id"></span></div>
+	  <div>sag:family-name == <span wwpage:content="sag:family-name"></span></div>
+	  <div>sag:family-organization == <span wwpage:content="sag:family-organization"></span></div>
+	  
+	  <div>sag:product-id == <span wwpage:content="sag:product-id"></span></div>
+	  <div>sag:product-name == <span wwpage:content="sag:product-name"></span></div>
+	  <div>sag:product-copyrfirst == <span wwpage:content="sag:product-copyrfirst"></span></div>
+	  <div>sag:product-family == <span wwpage:content="sag:product-family"></span></div>
+	  
+	  <!-\- SQ Variables - Values from DITA-Map and Keymap-\->
+	  <br></br>
+	  <div style="text-decoration: underline">From DITA/Book-Map:</div>
+	  <div>ProdInfo Prodname == <span wwpage:replace="wwvars:ProdInfoProdName"></span></div>
+	  <div>ProdInfo Mod First == <span wwpage:replace="wwvars:ProdInfoModFirst"></span></div>
+	  <div>ProdInfo Mod Last == <span wwpage:replace="wwvars:ProdInfoModLast"></span></div>
+	  <div>ProdInfo Rel First == <span wwpage:replace="wwvars:ProdInfoRelFirst"></span></div>
+	  <div>ProdInfo Rel Last == <span wwpage:replace="wwvars:ProdInfoRelLast"></span></div>
+	  <div>ProdInfo Vers First == <span wwpage:replace="wwvars:ProdInfoVersFirst"></span></div>
+	  <div>ProdInfo Vers Last == <span wwpage:replace="wwvars:ProdInfoVersLast"></span></div>
+	  <div>ProdInfo vrm vers.rel.mod == <span wwpage:replace="wwvars:ProdInfoVersFirst"></span>.<span wwpage:replace="wwvars:ProdInfoRelLast"></span>.<span wwpage:replace="wwvars:ProdInfoModLast"></span></div>
+	  <div>BookID PartNo == <span wwpage:replace="wwvars:BookPartNo"></span></div>
+	  <div>othermeta release-version == <span wwpage:replace="wwvars:ReleaseVersion"></span></div>
+	  <div>othermeta release-date == <span wwpage:replace="wwvars:ReleaseDate"></span></div>
+	  <div>othermeta release-edition == <span wwpage:replace="wwvars:ReleaseEdition"></span></div>
+	  <div>othermeta product == <span wwpage:replace="wwvars:Product"></span></div>
+	  <br></br>
+	  <div style="text-decoration: underline">From x_runtime/keymap.ditamap:</div>
+	  <div>sag:product-shortname == <span wwpage:replace="wwvars:sag:product-shortname"></span></div>
+	  <div>sag:product-longname == <span wwpage:replace="wwvars:sag:product-longname"></span></div>
+	  <div>versionAdd == <span wwpage:replace="wwvars:versionAdd"></span></div>
+	  <div>yearFYLY == <span wwpage:replace="wwvars:yearFYLY"></span></div>
+	  <div>fingerprint == <span wwpage:replace="wwvars:fingerprint"></span></div>
+	  <div>sag:CopyrightDeclaration == <span wwpage:replace="wwvars:sag:CopyrightDeclaration"></span></div>
+	  <div>pdfReleaseDate == <span wwpage:replace="wwvars:pdfReleaseDate"></span></div>
+	  <div>documentID == <span wwpage:replace="wwvars:documentID"></span></div>
+	  <br></br>
+	  <div style="text-decoration: underline">Reserve:</div>
+	  <div>organization == <span wwpage:content="organization"></span></div>
+	  <div>product-name == <span wwpage:content="product-name"></span></div>
+	  <div>copyright-first == <span wwpage:content="copyright-first"></span></div>
+	  <div>copyright-last == <span wwpage:content="copyright-last"></span></div>
+	  <div>copyright-first-b == <span wwpage:content="wwvars:copyright-first-b"></span></div>
+	  <div>copyright-last-b == <span wwpage:content="copyright-last-b"></span></div>
+	  <div>doc-id-one == <span wwpage:content="doc-id-one"></span></div>
+	  <div>doc-id-two == <span wwpage:content="doc-id-two"></span></div>  
+	  <div>Published == <span wwpage:content="pub-date"></span></div>
+	  --></footer></body></html>

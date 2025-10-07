@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IDataXMLCoder version="1.0">
+	<record javaclass="com.wm.data.ISMemDataImpl">
+		<array name="classlist" type="value" depth="1">
+			<value>com.wm.ps.serviceMock.MockObject</value>
+			<value>java.lang.RuntimeException</value>
+			<value>java.lang.Exception</value>
+			<value>java.lang.Throwable</value>
+			<value>java.lang.StackTraceElement</value>
+			<value>java.util.Collections</value>
+			<value>java.util.ArrayList</value>
+		</array>
+	</record>
+</IDataXMLCoder>
